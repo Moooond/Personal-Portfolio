@@ -1,0 +1,122 @@
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@media screen and (min-width: 56.25em) {
+	.single .content-area {
+		float: left;
+		width: 65%;
+	}
+
+	.single .site-content .widget-area {
+		float: right;
+		width: 25%;
+	}
+}
+
+/*--------------------------------------------------------------
+# Post Layouts
+--------------------------------------------------------------*/
+.archive,
+.search {
+	.content-area {
+		max-width: 60em;
+		margin: 0 auto;
+	}
+
+	.page-header {
+		margin-bottom: 2.5em;
+
+		@media screen and (min-width: $break-37) {
+			margin-bottom: 3.25em;
+		}
+
+		.page-title {
+			margin: 0;
+			font-size: 1.3em;
+			font-weight: normal;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+
+	.hentry {
+		clear: both;
+		@extend .clear;
+	}
+
+	.featured-image {
+		margin-bottom: 0.8em;
+	}
+
+	.entry-header {
+		margin-bottom: 1em;
+	}
+
+	.entry-title {
+		font-size: 1.3em;
+		line-height: 1.125;
+		margin-bottom: 0.4em;
+
+		@media screen and (min-width: $break-50) {
+			font-size: 1.7em;
+		}
+	}
+
+	.entry-title a {
+		text-decoration: none;
+	}
+
+	.entry-title a:hover {
+		text-decoration: underline;
+	}
+
+	.entry-content {
+		font-size: 1.2em;
+	}
+ 
+	@media screen and (min-width: $break-50) {
+		.featured-image {
+			float: left;
+			width: 29.34%;
+		}
+
+		.entry-header,
+		.entry-content {
+			float: right;
+			width: 67.66%;
+		}
+	}
+}
+
+.pagination {
+	text-align: center;
+
+	.page-numbers {
+		border: 1px solid #c5c5c5;
+		font-size: 0.8125rem;
+		line-height: 1;
+		padding: 0.7em 1.2em .65em;
+		transition: 0.1s;
+		text-transform: uppercase;
+		text-decoration: none;
+		border-radius: 3px;
+
+		&.prev,
+		&.next {
+			background: #333;
+			border-color: #333;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+				border-color: #333;
+			}
+		}
+
+		&:hover,
+		&.current {
+			color: #404040;
+			border-color: #595959;
+		}
+	}
+}
